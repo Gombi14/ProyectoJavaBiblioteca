@@ -1,0 +1,18 @@
+CREATE TABLE Llibres (
+    ID_Llibre INT PRIMARY KEY AUTO_INCREMENT,
+    Títol VARCHAR(255) NOT NULL,
+    Autor VARCHAR(255) NOT NULL,
+    ISBN VARCHAR(13) UNIQUE NOT NULL,
+    Editorial VARCHAR(255) NOT NULL,
+    Any_Publicació INT(4) NOT NULL
+);
+CREATE TABLE Usuaris (
+    ID_Usuari INT PRIMARY KEY AUTO_INCREMENT,
+    Nom VARCHAR(255) NOT NULL,
+    Cognoms VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    Telèfon VARCHAR(15) NOT NULL,
+    Rol ENUM('usuari', 'bibliotecari') NOT NULL,
+    Data_Registre DATE NOT NULL
+);
+
